@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Map My Heritage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Map My Heritage</h1>
+        
+        <!-- Search Bar inside the header -->
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search for a location...">
+            <button type="button" class="search-btn">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/search.png" alt="Search Icon">
+            </button>
+        </div>
+    </header>
+
+    <!-- Google Maps -->
+    <div id="map" style="height: 500px;"></div>
+    
+    <!-- Toggle button for form visibility -->
+    <button id="toggleForm" class="toggle-btn">Add New Location</button>
+
+    <!-- The location form is hidden initially and appears upon toggling -->
+    <form id="locationForm" class="hidden">
+        <input type="text" id="name" placeholder="Location Name" required>
+        <input type="text" id="lat" placeholder="Latitude" required>
+        <input type="text" id="lng" placeholder="Longitude" required>
+        <input type="text" id="link" placeholder="Wiki Link" required>
+        <input type="text" id="insta" placeholder="Instagram Link" required>
+        <!-- Use text input to allow entering image URLs -->
+        <input type="text" id="imgUrl" placeholder="Image URL" required>
+        <button id="enableClick" type="button">Enable Map Click</button>
+        <button type="submit">Add Location</button>
+    </form>
+
+    <script>
+        var map;
+        var clickListener;
+        var markers = []; // Array to keep track of markers
+        var locations = []; // Array to keep track of all locations
+        var currentInfoWindow = null; // Variable to store the currently open info window
+
+        // Initialize the Google Map
+        async function initMap() {
+            var options = {
+                zoom: 6,
+                center: { lat: 15.3173, lng: 75.7139 },
+                mapTypeControlOptions: { mapTypeIds: ['roadmap', 'satellite'] }
+            };
+            map = new google.maps.Map(document.getElementById('map'), options);
+        
+            // Fetch and display existing locations
+            const locationsResponse = await fetch('locations.json');
+            locations = await locationsResponse.json();
+        
+            // Fetch images
+            const imagesResponse = await fetch('images.json');
+            const images = await imagesResponse.json();
+        
+            // Integrate images into locations
+            locations.forEach(location => {
+                const image = images.find(img => img.name === location.name);
+                if (image) {
+                    location.img = image.img;
+                }
+                addMarkerAndListItem(location);
+            });
+        }
+
+        // Toggle form visibility when the button is clicked
+        document.getElementById('toggleForm').addEventListener('click', function() {
+            const form = document.getElementById('locationForm');
+            form.classList.toggle('hidden');
+            this.textContent = form.classList.contains('hidden') ? "Add New Location" : "Hide Form";
+        });
+
+        // Add a marker and list item for each location
+        function addMarkerAndListItem(location) {
+            var marker = new google.maps.Marker({
+                position: { lat: location.lat, lng: location.lng },
+                map: map,
+                title: location.name,
+                // Use local PNG image as the marker icon
+                icon: {
+                    url: 'flag.png', // Path to your local PNG image
+                    scaledSize: new google.maps.Size(30, 30) // Resize marker to 30x30 pixels
+                }
+            });
+
+            markers.push({ marker, location });
+
+            // Display info window on marker click
+            google.maps.event.addListener(marker, 'click', function () {
+                // If there's an info window already open, close it
+                if (currentInfoWindow) {
+                    currentInfoWindow.close();
+                }
+
+                // Create a new info window
+                var infoWindow = new google.maps.InfoWindow({
+                    content: '<div class="info-window">' +
+                             '<h2>' + location.name + '</h2>' +
+                             '<img src="' + location.img + '" alt="' + location.name + '">' +
+                             '<div class="buttons">' +
+                                 '<a href="' + location.link + '" target="_blank">Learn More</a>' +
+                                 '<button onclick="window.open(\'' + location.insta + '\', \'_blank\')">See on Instagram</button>' +
+                                 '<button onclick="window.open(\'https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=' + location.lat + ',' + location.lng + '\', \'_blank\')">Get Directions</button>' +
+                             '</div>' +
+                         '</div>'
+                });
+
+                // Open the info window
+                infoWindow.open(map, marker);
+
+                // Store the current info window reference
+                currentInfoWindow = infoWindow;
+            });
+        }
+
+        // Clear all markers from the map
+        function clearMarkers() {
+            markers.forEach(({ marker }) => marker.setMap(null));
+        }
+
+        // Show all markers on the map
+        function showMarkers() {
+            markers.forEach(({ marker }) => marker.setMap(map));
+        }
+
+        // Filter markers based on the search query
+        document.getElementById('search').addEventListener('input', function() {
+            const searchQuery = this.value.toLowerCase();
+
+            clearMarkers(); // Hide all markers initially
+            markers.forEach(({ marker, location }) => {
+                if (location.name.toLowerCase().includes(searchQuery)) {
+                    marker.setMap(map); // Show matching markers
+                }
+            });
+        });
+
+        // Add new location to the map and list
+        document.getElementById('locationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Gather input values
+            const name = document.getElementById('name').value;
+            const lat = parseFloat(document.getElementById('lat').value);
+            const lng = parseFloat(document.getElementById('lng').value);
+            const link = document.getElementById('link').value;
+            const insta = document.getElementById('insta').value;
+            const img = document.getElementById('imgUrl').value; // Get image from URL input
+            
+            // Validate image URL
+            if (!img.match(/\.(jpeg|jpg|gif|png)$/)) {
+                alert('Please enter a valid image URL.');
+                return;
+            }
+
+            const newLocation = { lat, lng, name, link, insta, img };
+            locations.push(newLocation); // Add new location to locations array
+            addMarkerAndListItem(newLocation); // Add new marker and list item
+
+            // Clear the form
+            document.getElementById('locationForm').reset();
+        });
+
+        // Enable clicking on the map to set coordinates in the form
+        document.getElementById('enableClick').addEventListener('click', function() {
+            if (clickListener) {
+                google.maps.event.removeListener(clickListener);
+                clickListener = null;
+                document.getElementById('enableClick').innerText = "Enable Map Click";
+                showMarkers(); // Show markers when disabling map click
+            } else {
+                clearMarkers(); // Clear markers when enabling map click
+                clickListener = map.addListener('click', function(event) {
+                    document.getElementById('lat').value = event.latLng.lat();
+                    document.getElementById('lng').value = event.latLng.lng();
+                });
+                document.getElementById('enableClick').innerText = "Disable Map Click";
+            }
+        });
+
+        initMap(); // Initialize the map
+    </script>
+
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZVa6WVNCHb_8U7PbUehrirFGXCh9OnKg&callback=initMap"></script>
+</body>
+</html>

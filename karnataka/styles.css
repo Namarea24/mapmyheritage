@@ -1,0 +1,240 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    flex: 1 1 60%;
+    text-align: left;
+    margin: 0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex: 1 1 40%;
+    justify-content: flex-end;
+}
+
+.search-container input {
+    width: 70%;
+    padding: 12px 20px;
+    border: 2px solid #45a049;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-container button {
+    background-color: #45a049;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.search-container button img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1); /* Ensures white icon */
+}
+
+.search-container button:hover {
+    background-color: #3e8e41;
+}
+
+.search-container input::placeholder {
+    color: #888;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    header h1 {
+        text-align: center;
+        flex: 1 1 100%;
+    }
+
+    .search-container {
+        flex: 1 1 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .search-container input {
+        width: 80%;
+    }
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+#locationList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#locationList li {
+    background: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-basis: 45%;
+    max-width: 45%;
+    text-align: center;
+}
+
+#locationList li a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.info-window {
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-window h3 {
+    margin: 0;
+}
+
+.info-window img {
+    width: 250px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.info-window .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.info-window a,
+.info-window button {
+    flex: 1;
+    padding: 20px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+.info-window a:hover,
+.info-window button:hover {
+    background-color: #45a049;
+}
+
+/* Added spacing between buttons */
+.info-window .buttons a, 
+.info-window .buttons button {
+    margin: 0 10px;
+}
+
+/* Form Styling */
+form {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form input,
+form button {
+    flex: 1 1 45%;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    /* Added shadow for better feedback */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+form button:hover {
+    background-color: #45a049;
+    /* Increased shadow on hover */
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
+
+#enableClick {
+    flex: 1 1 100%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#enableClick:hover {
+    background-color: #45a049;
+}
+
+/* Hide the form initially */
+.hidden {
+    display: none;
+}
+
+/* Styling for the toggle button */
+.toggle-btn {
+    display: block;
+    margin: 12px auto;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Increased the font size */
+}
+
+.toggle-btn:hover {
+    background-color: #45a049;
+}

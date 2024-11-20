@@ -1,0 +1,290 @@
+[
+    {
+        "lat": 12.3051,
+        "lng": 76.6553,
+        "name": "Mysore Palace",
+        "link": "https://en.wikipedia.org/wiki/Mysore_Palace",
+        "insta": "https://www.instagram.com/explore/tags/mysorepalace/"
+    },
+    {
+        "lat": 15.3333,
+        "lng": 76.4667,
+        "name": "Hampi",
+        "link": "https://en.wikipedia.org/wiki/Hampi",
+        "insta": "https://www.instagram.com/explore/tags/hampi/"
+    },
+    {
+        "lat": 15.9183,
+        "lng": 75.6933,
+        "name": "Badami (Vatapi)",
+        "link": "https://en.wikipedia.org/wiki/Badami",
+        "insta": "https://www.instagram.com/explore/tags/badami/"
+    },
+    {
+        "lat": 15.9483,
+        "lng": 75.8153,
+        "name": "Pattadakal",
+        "link": "https://en.wikipedia.org/wiki/Pattadakal",
+        "insta": "https://www.instagram.com/explore/tags/pattadakal/"
+    },
+    {
+        "lat": 12.4149,
+        "lng": 76.7042,
+        "name": "Srirangapatna",
+        "link": "https://en.wikipedia.org/wiki/Srirangapatna",
+        "insta": "https://www.instagram.com/explore/tags/srirangapatna/"
+    },
+    {
+        "lat": 13.6264,
+        "lng": 75.4771,
+        "name": "Bangalore Fort",
+        "link": "https://en.wikipedia.org/wiki/Bangalore_Fort",
+        "insta": "https://www.instagram.com/explore/tags/bangalorefort/"
+    },
+    {
+        "lat": 15.5293,
+        "lng": 74.7897,
+        "name": "Chandramouleshwara Temple",
+        "link": "https://en.wikipedia.org/wiki/Chandramouleshwara_Temple",
+        "insta": "https://www.instagram.com/explore/tags/chandramouleshwaratemple/"
+    },
+    {
+        "lat": 14.2778,
+        "lng": 75.1197,
+        "name": "Dharwad Fort",
+        "link": "https://en.wikipedia.org/wiki/Dharwad",
+        "insta": "https://www.instagram.com/explore/tags/dharwadfort/"
+    },
+    {
+        "lat": 12.9791,
+        "lng": 77.5912,
+        "name": "Tipu Sultan's Summer Palace",
+        "link": "https://en.wikipedia.org/wiki/Tipu_Sultan%27s_Summer_Palace",
+        "insta": "https://www.instagram.com/explore/tags/tipusultanssummerpalace/"
+    },
+    {
+        "lat": 13.2408,
+        "lng": 74.7459,
+        "name": "St. Mary's Island",
+        "link": "https://en.wikipedia.org/wiki/St._Mary%27s_Island",
+        "insta": "https://www.instagram.com/explore/tags/stmarysisland/"
+    },
+    {
+        "lat": 13.4679,
+        "lng": 75.6488,
+        "name": "Sakleshpur Fort",
+        "link": "https://en.wikipedia.org/wiki/Sakleshpur",
+        "insta": "https://www.instagram.com/explore/tags/sakleshpurfort/"
+    },
+    {
+        "lat": 13.2711,
+        "lng": 75.0397,
+        "name": "Shravanabelagola",
+        "link": "https://en.wikipedia.org/wiki/Shravanabelagola",
+        "insta": "https://www.instagram.com/explore/tags/shravanabelagola/"
+    },
+    {
+        "lat": 14.8195,
+        "lng": 75.2289,
+        "name": "Balehonnur Fort",
+        "link": "https://en.wikipedia.org/wiki/Balehonnur",
+        "insta": "https://www.instagram.com/explore/tags/balehonnurfort/"
+    },
+    {
+        "lat": 15.3121,
+        "lng": 76.0967,
+        "name": "Aihole",
+        "link": "https://en.wikipedia.org/wiki/Aihole",
+        "insta": "https://www.instagram.com/explore/tags/aihole/"
+    },
+    {
+        "lat": 13.1995,
+        "lng": 75.2286,
+        "name": "Chitradurga Fort",
+        "link": "https://en.wikipedia.org/wiki/Chitradurga_fort",
+        "insta": "https://www.instagram.com/explore/tags/chitradurga/"
+    },
+    {
+        "lat": 14.9352,
+        "lng": 75.5101,
+        "name": "Kudalasangama",
+        "link": "https://en.wikipedia.org/wiki/Kudalasangama",
+        "insta": "https://www.instagram.com/explore/tags/kudalasangama/"
+    },
+    {
+        "lat": 14.4744,
+        "lng": 75.1133,
+        "name": "Gokak Falls",
+        "link": "https://en.wikipedia.org/wiki/Gokak",
+        "insta": "https://www.instagram.com/explore/tags/gokakfalls/"
+    },
+    {
+        "lat": 13.0355,
+        "lng": 75.5391,
+        "name": "Nandi Hills",
+        "link": "https://en.wikipedia.org/wiki/Nandi_Hills",
+        "insta": "https://www.instagram.com/explore/tags/nandihills/"
+    },
+    {
+        "lat": 12.8675,
+        "lng": 75.0525,
+        "name": "Jain Temple, Sravanabelagola",
+        "link": "https://en.wikipedia.org/wiki/Shravanabelagola",
+        "insta": "https://www.instagram.com/explore/tags/jaintemple/"
+    },
+    {
+        "lat": 12.8694,
+        "lng": 75.0808,
+        "name": "Gomateshwara Statue",
+        "link": "https://en.wikipedia.org/wiki/Gomateshwara",
+        "insta": "https://www.instagram.com/explore/tags/gomateshwara/"
+    },
+    {
+        "lat": 14.8595,
+        "lng": 75.4321,
+        "name": "Bijapur Fort",
+        "link": "https://en.wikipedia.org/wiki/Bijapur",
+        "insta": "https://www.instagram.com/explore/tags/bijapurfort/"
+    },
+    {
+        "lat": 15.8403,
+        "lng": 75.7121,
+        "name": "Gol Gumbaz",
+        "link": "https://en.wikipedia.org/wiki/Gol_Gumbaz",
+        "insta": "https://www.instagram.com/explore/tags/golgumbaz/"
+    },
+    {
+        "lat": 15.3900,
+        "lng": 75.7216,
+        "name": "Ibrahim Rauza",
+        "link": "https://en.wikipedia.org/wiki/Ibrahim_Rauza",
+        "insta": "https://www.instagram.com/explore/tags/ibrahimrauza/"
+    },
+    {
+        "lat": 13.0639,
+        "lng": 75.1021,
+        "name": "Siddharoodha Math",
+        "link": "https://en.wikipedia.org/wiki/Siddharoodha_Math",
+        "insta": "https://www.instagram.com/explore/tags/siddharoodhamath/"
+    },
+    {
+        "lat": 15.1269,
+        "lng": 75.3975,
+        "name": "Rangin Mahal",
+        "link": "https://en.wikipedia.org/wiki/Rangin_Mahal",
+        "insta": "https://www.instagram.com/explore/tags/ranginmahal/"
+    },
+    {
+        "lat": 13.0380,
+        "lng": 75.4772,
+        "name": "Channarayana Durga",
+        "link": "https://en.wikipedia.org/wiki/Channarayana_Durga",
+        "insta": "https://www.instagram.com/explore/tags/channarayanadurga/"
+    },
+    {
+        "lat": 15.0191,
+        "lng": 75.5695,
+        "name": "Nawabi Mosque",
+        "link": "https://en.wikipedia.org/wiki/Nawabi_Mosque",
+        "insta": "https://www.instagram.com/explore/tags/nawabimosque/"
+    },
+    {
+        "lat": 13.5600,
+        "lng": 75.0494,
+        "name": "Vijayanagara Empire Ruins",
+        "link": "https://en.wikipedia.org/wiki/Vijayanagara",
+        "insta": "https://www.instagram.com/explore/tags/vijayanagararuins/"
+    },
+    {
+        "lat": 14.4167,
+        "lng": 75.6519,
+        "name": "Belligavi",
+        "link": "https://en.wikipedia.org/wiki/Belligavi",
+        "insta": "https://www.instagram.com/explore/tags/belligavi/"
+    },
+    {
+        "lat": 13.7273,
+        "lng": 75.4312,
+        "name": "Chitradurga Fort",
+        "link": "https://en.wikipedia.org/wiki/Chitradurga_Fort",
+        "insta": "https://www.instagram.com/explore/tags/chitradurga/"
+    },
+    {
+        "lat": 14.9421,
+        "lng": 75.6123,
+        "name": "Uppara Gudi Fort",
+        "link": "https://en.wikipedia.org/wiki/Uppara_Gudi_Fort",
+        "insta": "https://www.instagram.com/explore/tags/upparagutifort/"
+    },
+    {
+        "lat": 12.9762,
+        "lng": 75.8725,
+        "name": "Kudremukh",
+        "link": "https://en.wikipedia.org/wiki/Kudremukh",
+        "insta": "https://www.instagram.com/explore/tags/kudremukh/"
+    },
+    {
+        "lat": 15.3170,
+        "lng": 74.7435,
+        "name": "Chandragutti Temple",
+        "link": "https://en.wikipedia.org/wiki/Chandragutti_Temple",
+        "insta": "https://www.instagram.com/explore/tags/chandraguttitemple/"
+    },
+    {
+        "lat": 12.7654,
+        "lng": 75.6182,
+        "name": "Banavasi",
+        "link": "https://en.wikipedia.org/wiki/Banavasi",
+        "insta": "https://www.instagram.com/explore/tags/banavasi/"
+    },
+    {
+        "lat": 12.9208,
+        "lng": 75.7971,
+        "name": "Sagara Fort",
+        "link": "https://en.wikipedia.org/wiki/Sagara",
+        "insta": "https://www.instagram.com/explore/tags/sagarafort/"
+    },
+    {
+        "lat": 14.2723,
+        "lng": 74.9469,
+        "name": "Vijayanagar Fort",
+        "link": "https://en.wikipedia.org/wiki/Vijayanagara_Fort",
+        "insta": "https://www.instagram.com/explore/tags/vijayanagarfort/"
+    },
+    {
+        "lat": 12.6316,
+        "lng": 75.2428,
+        "name": "Durga Temple, Aihole",
+        "link": "https://en.wikipedia.org/wiki/Aihole",
+        "insta": "https://www.instagram.com/explore/tags/aiholetemple/"
+    },
+    {
+        "lat": 12.8011,
+        "lng": 75.6800,
+        "name": "Ramanagaram Fort",
+        "link": "https://en.wikipedia.org/wiki/Ramanagaram",
+        "insta": "https://www.instagram.com/explore/tags/ramanagaramfort/"
+    },
+    {
+        "lat": 13.3379,
+        "lng": 75.5303,
+        "name": "Chennakesava Temple, Somanathapura",
+        "link": "https://en.wikipedia.org/wiki/Chennakesava_Temple",
+        "insta": "https://www.instagram.com/explore/tags/chennakesavatemple/"
+    },
+    {
+        "lat": 13.2812,
+        "lng": 75.7204,
+        "name": "Shivagiri Fort",
+        "link": "https://en.wikipedia.org/wiki/Shivagiri",
+        "insta": "https://www.instagram.com/explore/tags/shivagirifort/"
+    },
+    {
+        "lat": 13.0582,
+        "lng": 75.5651,
+        "name": "Kudalasangama",
+        "link": "https://en.wikipedia.org/wiki/Kudalasangama",
+        "insta": "https://www.instagram.com/explore/tags/kudalasangama/"
+    }
+]
+
